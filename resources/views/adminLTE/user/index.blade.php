@@ -98,7 +98,7 @@
                                             <i class="fa fa-star"></i>
                                         </span>
                                     @endif
-                                    {{$val->name}}</td>
+                                    {{$val->firstname." ".$val->lastname}}</td>
                                 <td>
                                     {{$val->email}}
                                 </td>

@@ -45,15 +45,15 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>
-                                    نام کاربر
+                                    نام
                                 </label>
-                                <input type="text" name="name" required value="{{$user->name}}" class="form-control">
+                                <input type="text" name="firstname" required value="{{$user->firstname}}" class="form-control">
                             </div>
                             <div class="col-md-6">
                                 <label>
-                                    ایمیل کاربر
+                                   نام خانوادگی
                                 </label>
-                                <input type="email" name="email" required value="{{$user->email}}" class="form-control">
+                                <input type="text" name="lastname" required value="{{$user->lastname}}" class="form-control">
                             </div>
                         </div>
                         <br>
