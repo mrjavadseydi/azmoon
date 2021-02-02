@@ -17,9 +17,9 @@ class CreateActivitiesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->boolean('status')->default(false);;
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->boolean('status')->default(true);
+            $table->timestamp('start_date')->nullable();
+            $table->timestamp('end_date')->nullable();
             $table->timestamps();
         });
     }

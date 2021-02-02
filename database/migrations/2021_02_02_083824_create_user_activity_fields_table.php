@@ -17,6 +17,8 @@ class CreateUserActivityFieldsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('activity_id');
             $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
+             $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('activity_feild_id');
             $table->foreign('activity_feild_id')->references('id')->on('activity_fields')->onDelete('cascade');
             $table->boolean('status')->default(false);

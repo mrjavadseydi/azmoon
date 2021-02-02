@@ -898,12 +898,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mrjavadseydi/adminLTE.git",
-                "reference": "af149c84d2a69f2361ddca639c6508bfd8fa3ca2"
+                "reference": "e28d094c0bd533c7744a8d2df2856444d2b96e50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mrjavadseydi/adminLTE/zipball/af149c84d2a69f2361ddca639c6508bfd8fa3ca2",
-                "reference": "af149c84d2a69f2361ddca639c6508bfd8fa3ca2",
+                "url": "https://api.github.com/repos/mrjavadseydi/adminLTE/zipball/e28d094c0bd533c7744a8d2df2856444d2b96e50",
+                "reference": "e28d094c0bd533c7744a8d2df2856444d2b96e50",
                 "shasum": ""
             },
             "default-branch": true,
@@ -925,7 +925,7 @@
                 "issues": "https://github.com/mrjavadseydi/adminLTE/issues",
                 "source": "https://github.com/mrjavadseydi/adminLTE/tree/master"
             },
-            "time": "2021-02-02T07:47:30+00:00"
+            "time": "2021-02-02T08:25:57+00:00"
         },
         {
             "name": "laravel/framework",
