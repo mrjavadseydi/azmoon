@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "527e6c5dc4b0132d9c73593309c9f0e4",
+    "content-hash": "9659b44d2b6db904fa3715957bee1978",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -891,41 +891,6 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.7.0"
             },
             "time": "2020-09-30T07:37:11+00:00"
-        },
-        {
-            "name": "javad/adminlte",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mrjavadseydi/adminLTE.git",
-                "reference": "e28d094c0bd533c7744a8d2df2856444d2b96e50"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mrjavadseydi/adminLTE/zipball/e28d094c0bd533c7744a8d2df2856444d2b96e50",
-                "reference": "e28d094c0bd533c7744a8d2df2856444d2b96e50",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MrjavadSeydi\\AdminLTE\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "mrgod",
-                    "email": "miniopera165@gmail.com"
-                }
-            ],
-            "description": "admin panel and role permission system (RTL)",
-            "support": {
-                "issues": "https://github.com/mrjavadseydi/adminLTE/issues",
-                "source": "https://github.com/mrjavadseydi/adminLTE/tree/master"
-            },
-            "time": "2021-02-02T08:25:57+00:00"
         },
         {
             "name": "laravel/framework",
@@ -6030,16 +5995,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.9",
+            "version": "2.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "66b3138ecce38024723fb3bfc66ef8852a779ea9"
+                "reference": "98154e8b991fb616304c213cd405299ffedc26f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/66b3138ecce38024723fb3bfc66ef8852a779ea9",
-                "reference": "66b3138ecce38024723fb3bfc66ef8852a779ea9",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/98154e8b991fb616304c213cd405299ffedc26f5",
+                "reference": "98154e8b991fb616304c213cd405299ffedc26f5",
                 "shasum": ""
             },
             "require": {
@@ -6103,7 +6068,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-01-26T14:45:19+00:00"
+            "time": "2021-02-02T10:15:48+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -8676,9 +8641,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "javad/adminlte": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

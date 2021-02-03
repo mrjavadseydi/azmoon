@@ -15,6 +15,7 @@ class CreateActivityFieldsTable extends Migration
     {
         Schema::create('activity_fields', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
             $table->unsignedBigInteger('activity_id');
             $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
             $table->string('type');

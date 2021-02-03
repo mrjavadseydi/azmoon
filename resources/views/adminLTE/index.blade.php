@@ -13,84 +13,50 @@
     </div>
 @endsection
 @section('content')
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-success"><i class="fa fa-user"></i></span>
 
-                <div class="info-box-content">
-                    <span class="info-box-text">کاربران </span>
-                    <span class="info-box-number">
-                        {{\App\Models\User::count()}}
-                    </span>
+        <h5 class="">فعالیت های قابل ثبت نام </h5>
+        <div class="row">
+            @foreach(\App\Models\Activity::whereNotIn('id',\App\Models\UserActivity::where('user_id',Auth::id())->pluck('activity_id'))->where([['start_date','<',\Carbon\Carbon::now()],['end_date','>',\Carbon\Carbon::now()]])->get() as $activity)
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="info-box bg-info-gradient">
+                        <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+                        <a href="{{route('activity.show',$activity->id)}}" style="color: white">
+                        <div class="info-box-content">
+                            <span class="info-box-text">{{$activity->title}}</span>
+
+                            <span class="progress-description">
+
+                            جهت ثبت نام روی این لینک کلیک کنید
+
+
+                        </span>
+                        </div>
+                        </a>
+                    </div>
                 </div>
-                <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
+            @endforeach
         </div>
-        <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-info"><i class="fa fa-envelope-o"></i></span>
+        <h5 class="">فعالیت های ثبت نام شده</h5>
+        <div class="row">
+            @foreach(\App\Models\Activity::whereIn('id',\App\Models\UserActivity::where('user_id',Auth::id())->pluck('activity_id'))->get() as $activity)
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="info-box bg-success-gradient">
+                        <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
 
-                <div class="info-box-content">
-                    <span class="info-box-text">فعالیت های ثبت شده </span>
-                    <span class="info-box-number">
+                        <div class="info-box-content">
+                            <span class="info-box-text">{{$activity->title}}</span>
 
-                    </span>
+                            <span class="progress-description">
+                        <a href="{{route('activity.show',$activity->id)}}" style="color:white">
+                            جهت دریافت اطلاعیه کلیک کنید
+                        </a>
+
+
+                        </span>
+                        </div>
+                    </div>
                 </div>
-                <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
+            @endforeach
         </div>
-        <!-- /.col -->
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-warning"><i class="fa fa-warning"></i></span>
 
-                <div class="info-box-content">
-                    <span class="info-box-text">فعالیت نیاز به بررسی</span>
-                    <span class="info-box-number">
-
-                    </span>
-                </div>
-                <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-danger"><i class="fa fa-star-o"></i></span>
-
-                <div class="info-box-content">
-                    <span class="info-box-text">تعداد زیر طبقاط</span>
-                    <span class="info-box-number">
-
-                    </span>
-                </div>
-                <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-primary card-outline">
-                <div class="card-header">
-                    <h3 class="card-title">
-                        <i class="fa fa-dashboard"></i>
-                        داشبورد
-                    </h3>
-                </div>
-
-                <div class="card-body pad table-responsive">
-
-                </div>
-                <!-- /.card -->
-            </div>
-        </div>
-        <!-- /.col -->
-    </div>
 @endsection

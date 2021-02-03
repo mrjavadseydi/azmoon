@@ -1,0 +1,15 @@
+{
+    "name": "javad/adminlte",
+    "description": "admin panel and role permission system (RTL)",
+    "authors": [
+        {
+            "name": "mrgod",
+            "email": "miniopera165@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MrjavadSeydi\\AdminLTE\\": "src/"
+        }
+    }
+}
